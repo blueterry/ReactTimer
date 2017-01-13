@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import Clock from 'Clock';
 
 class Counter extends Component {
     render() {
         return (
             <div>
-                <h3>Counter.jsx</h3>
+                <Clock totalSeconds={139}></Clock>
             </div>
         );
     }
