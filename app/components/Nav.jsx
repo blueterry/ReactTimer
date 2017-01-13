@@ -9,10 +9,10 @@ class Nav extends Component {
                     <ul className="menu">
                         <li className="menu-text">React Timer App</li>
                         <li>
-                            <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight:'bold'}}>Timer</IndexLink>
+                            <IndexLink to="/" activeClassName="active-link" >Timer</IndexLink>
                         </li>
                         <li>
-                            <Link to="about" activeClassName="active" activeStyle={{fontWeight:'bold'}}>Counter</Link>
+                            <Link to="Counter" activeClassName="active-link">Counter</Link>
                         </li>
                     </ul>
                 </div>

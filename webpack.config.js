@@ -27,6 +27,8 @@ module.exports ={
             //Greeter: 'public/components/Greeter.jsx',
             Main:           'app/components/Main.jsx',
             Nav:            'app/components/Nav.jsx',
+            Timer:          'app/components/Timer.jsx',      
+            Counter:        'app/components/Counter.jsx',      
             appStyles:      'app/styles/app.scss'
         },
         extensions: ['', '.js', '.jsx']
