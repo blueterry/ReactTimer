@@ -12,7 +12,7 @@ class Nav extends Component {
                             <IndexLink to="/" activeClassName="active-link" >Timer</IndexLink>
                         </li>
                         <li>
-                            <Link to="Counter" activeClassName="active-link">Counter</Link>
+                            <Link to="Counter" activeClassName="active-link">Countdown</Link>
                         </li>
                     </ul>
                 </div>

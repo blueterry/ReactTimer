@@ -7,8 +7,7 @@ class Main extends Component {
             <div>                
                 <Nav />
                 <div className="row">
-                    <div className="columns medium-6 large-4 small-centered">
-                        <p>Main.jsx Rendered</p>
+                    <div className="columns medium-6 large-4 small-centered">                        
                         {this.props.children}     
                     </div> 
                 </div>
