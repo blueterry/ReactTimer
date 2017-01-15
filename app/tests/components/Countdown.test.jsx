@@ -26,14 +26,14 @@ describe('Countdown',()=>{
 
         it('Should be all 0',(done)=>{
             var cdown = TestUtils.renderIntoDocument(<Counter/>);
-            cdown.handleSetCountdown(2);
+            cdown.handleSetCountdown(1);
 
-            expect(cdown.state.count).toBe(2);
+            expect(cdown.state.count).toBe(1);
             
             setTimeout(()=>{
                 expect(cdown.state.count).toBe(0);
                 done();
-            },4001);
+            },3001);
         })
     });
 });
