@@ -65,14 +65,17 @@ class Counter extends Component {
             this.setState({
                 count: newCnt >= 0? newCnt:0
             });
+            if(newCnt === 0){
+                this.setState({countdownStatus: 'stopped'});
+            }
         },1000);
     }
     //componentWillReceiveProps(nextProps){
     //    console.log('component will receive props', nextProps);
     //}
-    // componentWillUpdate(nextProps, nextState){
-    //     console.log('component Will Update',nextProps, nextState);
-    // }
+    //componentWillUpdate(nextProps, nextState){
+    //    console.log('component Will Update',nextProps, nextState);
+    //}
     // componentDidMount(){
     //     console.log('component did mount');
     // }
