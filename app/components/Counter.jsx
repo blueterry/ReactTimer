@@ -10,8 +10,7 @@ class Counter extends Component {
             count:0,
             countdownStatus: 'stopped'
         }
-        this.handleSetCountdown = this.handleSetCountdown.bind(this);
-        this.componentDidUpdate = this.componentDidUpdate.bind(this);
+        this.handleSetCountdown = this.handleSetCountdown.bind(this);        
         this.startTimer = this.startTimer.bind(this);
         this.handleStatusChange = this.handleStatusChange.bind(this);
 

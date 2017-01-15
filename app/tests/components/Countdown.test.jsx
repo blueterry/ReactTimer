@@ -36,7 +36,7 @@ describe('Countdown',()=>{
                 done();
             },3003);
         });
-        it('should pause countdown on paused status',()=>{
+        it('should pause countdown on paused status',(done)=>{
             var cdn = TestUtils.renderIntoDocument(<Counter />);
             cdn.handleSetCountdown(3);
             cdn.handleStatusChange('paused');
@@ -46,7 +46,7 @@ describe('Countdown',()=>{
                 done();
             },1001);
         });
-        it('should reset count on stop status',()=>{
+        it('should reset count on stop status',(done)=>{
             var cdn = TestUtils.renderIntoDocument(<Counter />);
             cdn.handleSetCountdown(3);
             cdn.handleStatusChange('stopped');
