@@ -25,7 +25,7 @@ describe('Countdown',()=>{
             },1001);
         });
 
-        it('Should be all 0',(done)=>{
+        it('Should be no less than zero',(done)=>{
             var cdown = TestUtils.renderIntoDocument(<Counter/>);
             cdown.handleSetCountdown(1);
 
@@ -34,7 +34,27 @@ describe('Countdown',()=>{
             setTimeout(()=>{
                 expect(cdown.state.count).toBe(0);
                 done();
-            },3001);
-        })
+            },3003);
+        });
+        it('should pause countdown on paused status',()=>{
+            var cdn = TestUtils.renderIntoDocument(<Counter />);
+            cdn.handleSetCountdown(3);
+            cdn.handleStatusChange('paused');
+            setTimeout(()=>{
+                expect(cdn.state.count).toBe(3);
+                expect(cdn.state.countdownStatus).toBe('paused');
+                done();
+            },1001);
+        });
+        it('should reset count on stop status',()=>{
+            var cdn = TestUtils.renderIntoDocument(<Counter />);
+            cdn.handleSetCountdown(3);
+            cdn.handleStatusChange('stopped');
+            setTimeout(()=>{
+                expect(cdn.state.count).toBe(0);
+                expect(cdn.state.countdownStatus).toBe('stopped');
+                done();
+            },1001);
+        });
     });
 });
