@@ -21,6 +21,8 @@ class CountdownForm extends Component {
         e.preventDefault();
         var strSec = this.refs.seconds.value;
 
+        console.log('input count', $('input').length);
+
         if(strSec.match(/^[0-9]*$/)){
             this.refs.seconds.value = '';
             this.props.onSetCountdown(parseInt(strSec, 10));

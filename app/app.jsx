@@ -8,7 +8,7 @@ import Timer from 'Timer';
 import Counter from 'Counter';
 
 //Load foundation
-require('style!css!foundation-sites/dist/css/foundation.min.css')
+//require('style!css!foundation-sites/dist/css/foundation.min.css') -- done in webpackconfig.js sassLoader
 $(document).foundation();
 
 //App css
