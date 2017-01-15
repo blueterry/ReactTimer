@@ -67,6 +67,23 @@ class Counter extends Component {
             });
         },1000);
     }
+    //componentWillReceiveProps(nextProps){
+    //    console.log('component will receive props', nextProps);
+    //}
+    // componentWillUpdate(nextProps, nextState){
+    //     console.log('component Will Update',nextProps, nextState);
+    // }
+    // componentDidMount(){
+    //     console.log('component did mount');
+    // }
+    // componentWillMount(){
+    //     console.log('component will mount');
+    // }
+    componentWillUnmount(){
+        console.log('Component did Unmount');
+        clearInterval(this.timer);
+        this.timer = undefined;
+    }
 }
 
 export default Counter;

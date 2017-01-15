@@ -26813,6 +26813,26 @@
 	                });
 	            }, 1000);
 	        }
+	        //componentWillReceiveProps(nextProps){
+	        //    console.log('component will receive props', nextProps);
+	        //}
+	        // componentWillUpdate(nextProps, nextState){
+	        //     console.log('component Will Update',nextProps, nextState);
+	        // }
+	        // componentDidMount(){
+	        //     console.log('component did mount');
+	        // }
+	        // componentWillMount(){
+	        //     console.log('component will mount');
+	        // }
+
+	    }, {
+	        key: 'componentWillUnmount',
+	        value: function componentWillUnmount() {
+	            console.log('Component did Unmount');
+	            clearInterval(this.timer);
+	            this.timer = undefined;
+	        }
 	    }]);
 
 	    return Counter;
