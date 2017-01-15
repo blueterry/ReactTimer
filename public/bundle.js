@@ -26731,9 +26731,12 @@
 	        var _this = _possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).call(this, props));
 
 	        _this.state = {
-	            count: 0
+	            count: 0,
+	            countdownStatus: 'stopped'
 	        };
 	        _this.handleSetCountdown = _this.handleSetCountdown.bind(_this);
+	        _this.componentDidUpdate = _this.componentDidUpdate.bind(_this);
+	        _this.startTimer = _this.startTimer.bind(_this);
 
 	        return _this;
 	    }
@@ -26754,8 +26757,33 @@
 	        key: 'handleSetCountdown',
 	        value: function handleSetCountdown(seconds) {
 	            this.setState({
-	                count: seconds
+	                count: seconds,
+	                countdownStatus: 'started'
 	            });
+	        }
+	    }, {
+	        key: 'componentDidUpdate',
+	        value: function componentDidUpdate(prevProps, prevState) {
+	            if (this.state.countdownStatus !== prevState.countdownStatus) {
+	                switch (this.state.countdownStatus) {
+	                    case 'started':
+	                        this.startTimer();
+	                        break;
+	                    default:
+	                }
+	            }
+	        }
+	    }, {
+	        key: 'startTimer',
+	        value: function startTimer() {
+	            var _this2 = this;
+
+	            this.timer = setInterval(function () {
+	                var newCnt = _this2.state.count - 1;
+	                _this2.setState({
+	                    count: newCnt >= 0 ? newCnt : 0
+	                });
+	            }, 1000);
 	        }
 	    }]);
 
